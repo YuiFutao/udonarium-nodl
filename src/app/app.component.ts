@@ -225,24 +225,6 @@ export class AppComponent implements AfterViewInit, OnDestroy {
     }
   }
 
-  async save() {
-    if (this.isSaveing) return;
-    this.isSaveing = true;
-    this.progresPercent = 0;
-
-    let roomName = Network.peerContext && 0 < Network.peerContext.roomName.length
-      ? Network.peerContext.roomName
-      : 'ルームデータ';
-    await this.saveDataService.saveRoomAsync(roomName, percent => {
-      this.progresPercent = percent;
-    });
-
-    setTimeout(() => {
-      this.isSaveing = false;
-      this.progresPercent = 0;
-    }, 500);
-  }
-
   handleFileSelect(event: Event) {
     let input = <HTMLInputElement>event.target;
     let files = input.files;
