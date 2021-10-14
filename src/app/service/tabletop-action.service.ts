@@ -179,12 +179,12 @@ export class TabletopActionService {
 
     testCharacter = new GameCharacter('testCharacter_5');
     fileContext = ImageFile.createEmpty('testCharacter_5_image').toContext();
-    fileContext.url = './assets/images/mon_211.gif';
+    fileContext.url = './assets/images/FutaoYui.png';
     testFile = ImageStorage.instance.add(fileContext);
     testCharacter.location.x = 12 * 50;
     testCharacter.location.y = 12 * 50;
     testCharacter.initialize();
-    testCharacter.createTestGameDataElement('キャラクターB', 1, testFile.identifier);
+    testCharacter.createTestGameDataElement('双尾ゆい', 1, testFile.identifier);
 
     testCharacter = new GameCharacter('testCharacter_6');
     fileContext = ImageFile.createEmpty('testCharacter_6_image').toContext();
